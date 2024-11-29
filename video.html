@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="headConten">
+        <p>Kumpulan Suasana Video Caffe Rumangsa</p>
+        <video autoplay loop muted>
+            <source src="video/coffee.mp4" type="video/mp4">
+        </video>
+    </div>
+    <nav>
+        <a href="index.html">Galery</a>
+        <a href="video.html">Video</a>
+    </nav>
+    <div class="container">
+        <div class="column">
+            <video muted>
+                <source src="video/1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="column">
+            <video muted>
+                <source src="video/2.mp4" type="video/mp4">
+            </video>
+            <video muted>
+                <source src="video/3.mp4" type="video/mp4">
+            </video>
+            <video muted>
+                <source src="video/4.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="column">
+            <video muted>
+                <source src="video/5.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <script>
+        const videos = document.querySelectorAll("video");
+
+        videos.forEach(video => {
+            video.addEventListener("mouseenter", () => {
+                video.play();
+            });
+
+            video.addEventListener("mouseleave", () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+    </script>
+</body>
+
+</html>
